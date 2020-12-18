@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        getFirstOddOrEvenElement(scanner);
+        vehiclePark(scanner);
 
     }
 
@@ -230,13 +231,78 @@ public class Main {
             int position = Integer.parseInt(tokens[1]);
 
 
-
-
             line = scanner.nextLine();
         }
     }
 
+    private static void gameOfNames(Scanner scanner) {
+        final int minPlayerScore = -100000;
+        int numberOfPlayers = scanner.nextInt();
 
+        String winnerName = "";
+        int winnerPoints = minPlayerScore;
 
+        // Calculating winner, while inputting data.
+        for (int i = 1; i <= numberOfPlayers; i++) {
+            String playerName = scanner.next();
+            int playerScore = scanner.nextInt();
+
+            // Getting char code of every players name.
+            for (int y = 0; y < playerName.length(); y++) {
+                int code = playerName.charAt(y);
+
+                if (code % 2 == 0) {
+                    playerScore += code;
+                } else {
+                    playerScore -= code;
+                }
+            }
+
+            if (playerScore > winnerPoints) {
+                winnerName = playerName;
+                winnerPoints = playerScore;
+            }
+        }
+
+        System.out.printf("The winner is %s - %d points", winnerName, winnerPoints);
+    }
+
+    private static void vehiclePark(Scanner scanner) {
+        String input = scanner.nextLine();
+        String[] cars = input.split(" ");
+        List<String> carsList = new ArrayList<>(Arrays.asList(cars));
+        int vehicleSold = 0;
+
+        String request = scanner.nextLine();
+        while (!"End of customers!".equals(request)) {
+            String vehicleType = request.split(" ")[0];
+            int numberOfSeats = Integer.parseInt(request.split(" ")[2]);
+            boolean isSold = false;
+
+            for (String car : carsList) {
+                char carType = car.charAt(0);
+                int carSeats = Integer.parseInt(car.substring(1));
+
+                // Hardcode vehicleType to lower, so I can check if I have the car in the list faster.
+                if (carType == vehicleType.toLowerCase().charAt(0) && carSeats == numberOfSeats) {
+                    int price = carType * carSeats;
+                    System.out.printf("Yes, sold for %d$%n", price);
+                    carsList.remove(car);
+                    isSold = true;
+                    vehicleSold++;
+                    break;
+                }
+            }
+
+            if (!isSold) {
+                System.out.println("No");
+            }
+
+            request = scanner.nextLine();
+        }
+
+        System.out.printf("Vehicles left: %s%n", String.join(", ", carsList));
+        System.out.printf("Vehicles sold: %d%n", vehicleSold);
+    }
 }
 
