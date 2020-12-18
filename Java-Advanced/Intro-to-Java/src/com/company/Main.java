@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        hitTheTarget(scanner);
+        getFirstOddOrEvenElement(scanner);
 
     }
 
@@ -131,5 +133,110 @@ public class Main {
             }
         }
     }
+
+    private static void characterMultiplier(Scanner scanner) {
+        String firstInput = scanner.next();
+        String secondInput = scanner.next();
+
+        int numberOfLoops = 0;
+        // Finds longer string input.
+        numberOfLoops = Math.max(firstInput.length(), secondInput.length());
+
+        int sum = 0;
+
+        for (int i = 0; i < numberOfLoops; i++) {
+            int firstCode = 0;
+            int secondCode = 0;
+
+            // Code for when the inputs' lengths are not equal.
+            if (firstInput.length() > i) {
+                firstCode = firstInput.charAt(i);
+            }
+
+            if (secondInput.length() > i) {
+                secondCode = secondInput.charAt(i);
+            }
+
+            if (firstCode != 0 && secondCode != 0) {
+                sum += firstCode * secondCode;
+            } else {
+                // Checks if either of the inputs are shorter.
+                if (firstCode != 0) {
+                    sum += firstCode;
+                }
+
+                if (secondCode != 0) {
+                    sum += secondCode;
+                }
+            }
+
+            firstCode = 0;
+            secondCode = 0;
+        }
+
+        System.out.println(sum);
+    }
+
+    private static void getFirstOddOrEvenElement(Scanner scanner) {
+        String firstInput = scanner.nextLine();
+        String secondInput = scanner.nextLine();
+        String[] numbers = firstInput.split(" ");
+        String[] command = secondInput.split(" ");
+
+        int numberOfElements = Integer.parseInt(command[1]);
+        // Using list to store the result.
+        List<Integer> elements = new ArrayList<>();
+
+        int counter = 0;
+        for (String numbersIndex : numbers) {
+            if (counter == numberOfElements) {
+                break;
+            }
+
+            int number = Integer.parseInt(numbersIndex);
+            if (command[2].equals("odd")) {
+                if (number % 2 != 0) {
+                    elements.add(number);
+                    counter++;
+                }
+            } else if (command[2].equals("even")) {
+                if (number % 2 == 0) {
+                    elements.add(number);
+                    counter++;
+                }
+            }
+        }
+
+        for (Integer element : elements) {
+            System.out.printf("%d ", element);
+        }
+    }
+
+    // Not Finished!
+    private static void ByteParty(Scanner scanner) {
+        int numberOfBytes = scanner.nextInt();
+
+        int[] numbers = new int[numberOfBytes];
+
+        for (int i = 0; i < numberOfBytes; i++) {
+            int number = scanner.nextInt();
+            numbers[i] = number;
+        }
+
+        String line = scanner.nextLine();
+        while (!"party over".equals(line)) {
+            String[] tokens = line.split(" ");
+            int pattern = Integer.parseInt(tokens[0]);
+            int position = Integer.parseInt(tokens[1]);
+
+
+
+
+            line = scanner.nextLine();
+        }
+    }
+
+
+
 }
 
