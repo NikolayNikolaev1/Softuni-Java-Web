@@ -31,7 +31,7 @@ public class StringMatrixRotation {
 
     }
 
-    private static char[][] createMatrix (ArrayDeque<String> queue, int inputMaxLength) {
+    private static char[][] createMatrix(ArrayDeque<String> queue, int inputMaxLength) {
         int rowsCount = queue.size();
         char[][] matrix = new char[rowsCount][inputMaxLength]; // inputMaxLength is colsCount
 
@@ -67,11 +67,11 @@ public class StringMatrixRotation {
     }
 
     private static char[][] rotateMatrix270Degrees(char[][] matrix) {
-        char[][] rotatedMatrix = new char[matrix.length][matrix[0].length];
+        char[][] rotatedMatrix = new char[matrix[0].length][matrix.length];
 
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[0].length; col++) {
-
+        for (int row = 0; row < matrix[0].length; row++) {
+            for (int col = 0; col < matrix.length; col++) {
+                rotatedMatrix[row][col] = matrix[col][row + matrix[0].length - 1 - row * 2];
             }
         }
 
@@ -96,7 +96,7 @@ public class StringMatrixRotation {
 
         for (int row = 0; row < matrix[0].length; row++) {
             for (int col = 0; col < matrix.length; col++) {
-                rotatedMatrix[row][col] = matrix[(col + matrix.length - 1 - col*2)][row];
+                rotatedMatrix[row][col] = matrix[(col + matrix.length - 1 - col * 2)][row];
             }
         }
 
@@ -106,7 +106,7 @@ public class StringMatrixRotation {
     private static void printMatrix(char[][] matrix) {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[0].length; col++) {
-                System.out.printf("%s ", matrix[row][col]);
+                System.out.print(matrix[row][col]);
             }
             System.out.println();
         }
