@@ -22,6 +22,7 @@ public class MaximumElement {
                     stack.pop();
                     break;
                 case "3":
+                    // TODO: NEEDS TO BE FIXED AND FINISHED
                     int maxElement = 0;
                     Object[] stackArr = stack.toArray();
 
