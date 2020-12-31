@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9807828-9563-450e-92b3-5d5e524e9d52" name="Default Changelist" comment="" />
+    <list default="true" id="0ef867dd-8727-427a-b800-2b8b3cc39a3e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +36,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1mM8tQVdd1DYH1w3xgqdlcYONmG" />
+  <component name="ProjectId" id="1mOrFLcWK57QtBS5BYxBdKCEnwR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -100,17 +100,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\code\repos\softuni\softuni-java-web\Java-Advanced\FilesAndDirectories\Resources" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.GetFolderSize">
-    <configuration name="CountCharacterTypes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.CountCharacterTypes" />
-      <module name="FilesAndDirectories" />
+  <component name="RunManager" selected="Application.Palindromes">
+    <configuration name="CountSubstringOccurences" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CountSubstringOccurences" />
+      <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -121,9 +115,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetFolderSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.GetFolderSize" />
-      <module name="FilesAndDirectories" />
+    <configuration name="Palindromes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Palindromes" />
+      <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -134,9 +128,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LineNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.LineNumbers" />
-      <module name="FilesAndDirectories" />
+    <configuration name="SumBigNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.SumBigNumbers" />
+      <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -147,9 +141,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeTwoFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.MergeTwoFiles" />
-      <module name="FilesAndDirectories" />
+    <configuration name="TextFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.TextFilter" />
+      <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -160,9 +154,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.WordCount" />
-      <module name="FilesAndDirectories" />
+    <configuration name="UnicodeCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.UnicodeCharacters" />
+      <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -174,30 +168,30 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CountCharacterTypes" />
-      <item itemvalue="Application.LineNumbers" />
-      <item itemvalue="Application.WordCount" />
-      <item itemvalue="Application.MergeTwoFiles" />
-      <item itemvalue="Application.GetFolderSize" />
+      <item itemvalue="Application.CountSubstringOccurences" />
+      <item itemvalue="Application.SumBigNumbers" />
+      <item itemvalue="Application.TextFilter" />
+      <item itemvalue="Application.UnicodeCharacters" />
+      <item itemvalue="Application.Palindromes" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetFolderSize" />
-        <item itemvalue="Application.MergeTwoFiles" />
-        <item itemvalue="Application.WordCount" />
-        <item itemvalue="Application.LineNumbers" />
-        <item itemvalue="Application.CountCharacterTypes" />
+        <item itemvalue="Application.Palindromes" />
+        <item itemvalue="Application.UnicodeCharacters" />
+        <item itemvalue="Application.TextFilter" />
+        <item itemvalue="Application.SumBigNumbers" />
+        <item itemvalue="Application.CountSubstringOccurences" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b9807828-9563-450e-92b3-5d5e524e9d52" name="Default Changelist" comment="" />
-      <created>1609292315991</created>
+      <changelist id="0ef867dd-8727-427a-b800-2b8b3cc39a3e" name="Default Changelist" comment="" />
+      <created>1609375377355</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609292315991</updated>
+      <updated>1609375377355</updated>
     </task>
     <servers />
   </component>
@@ -211,6 +205,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
