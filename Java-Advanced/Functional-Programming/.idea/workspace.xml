@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ef867dd-8727-427a-b800-2b8b3cc39a3e" name="Default Changelist" comment="" />
+    <list default="true" id="44e4f0bf-1c05-4a4c-bffa-ed28daabcfb7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +36,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1mOrFLcWK57QtBS5BYxBdKCEnwR" />
+  <component name="ProjectId" id="1mR8nIE6ey5Eor2g3mg2O32Sa3D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -101,10 +101,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Palindromes">
-    <configuration name="CountSubstringOccurences" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.CountSubstringOccurences" />
-      <module name="String-Processing" />
+  <component name="RunManager" selected="Application.AppliedArithmetic">
+    <configuration name="AppliedArithmetic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.AppliedArithmetic" />
+      <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -115,9 +115,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Palindromes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Palindromes" />
-      <module name="String-Processing" />
+    <configuration name="ConsumerPrint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ConsumerPrint" />
+      <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -128,9 +128,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumBigNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.SumBigNumbers" />
-      <module name="String-Processing" />
+    <configuration name="CustomMinFunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CustomMinFunction" />
+      <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -141,9 +141,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.TextFilter" />
-      <module name="String-Processing" />
+    <configuration name="FindEvensOrOdds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.FindEvensOrOdds" />
+      <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -154,9 +154,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnicodeCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.UnicodeCharacters" />
-      <module name="String-Processing" />
+    <configuration name="KnightsOfHonor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.KnightsOfHonor" />
+      <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -168,30 +168,30 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CountSubstringOccurences" />
-      <item itemvalue="Application.SumBigNumbers" />
-      <item itemvalue="Application.TextFilter" />
-      <item itemvalue="Application.UnicodeCharacters" />
-      <item itemvalue="Application.Palindromes" />
+      <item itemvalue="Application.ConsumerPrint" />
+      <item itemvalue="Application.KnightsOfHonor" />
+      <item itemvalue="Application.CustomMinFunction" />
+      <item itemvalue="Application.FindEvensOrOdds" />
+      <item itemvalue="Application.AppliedArithmetic" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Palindromes" />
-        <item itemvalue="Application.UnicodeCharacters" />
-        <item itemvalue="Application.TextFilter" />
-        <item itemvalue="Application.SumBigNumbers" />
-        <item itemvalue="Application.CountSubstringOccurences" />
+        <item itemvalue="Application.AppliedArithmetic" />
+        <item itemvalue="Application.FindEvensOrOdds" />
+        <item itemvalue="Application.CustomMinFunction" />
+        <item itemvalue="Application.KnightsOfHonor" />
+        <item itemvalue="Application.ConsumerPrint" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ef867dd-8727-427a-b800-2b8b3cc39a3e" name="Default Changelist" comment="" />
-      <created>1609375377355</created>
+      <changelist id="44e4f0bf-1c05-4a4c-bffa-ed28daabcfb7" name="Default Changelist" comment="" />
+      <created>1609445211209</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609375377355</updated>
+      <updated>1609445211209</updated>
     </task>
     <servers />
   </component>
@@ -205,6 +205,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
