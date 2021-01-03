@@ -101,35 +101,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.AppliedArithmetic">
+  <component name="RunManager" selected="Application.FindTheSmallestElement">
     <configuration name="AppliedArithmetic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.AppliedArithmetic" />
-      <module name="Functional-Programming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsumerPrint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ConsumerPrint" />
-      <module name="Functional-Programming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomMinFunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.CustomMinFunction" />
       <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +128,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KnightsOfHonor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.KnightsOfHonor" />
+    <configuration name="FindTheSmallestElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.FindTheSmallestElement" />
+      <module name="Functional-Programming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PredicateForNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.PredicateForNames" />
+      <module name="Functional-Programming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseAndExclude" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ReverseAndExclude" />
       <module name="Functional-Programming" />
       <extension name="coverage">
         <pattern>
@@ -168,19 +168,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ConsumerPrint" />
-      <item itemvalue="Application.KnightsOfHonor" />
-      <item itemvalue="Application.CustomMinFunction" />
       <item itemvalue="Application.FindEvensOrOdds" />
       <item itemvalue="Application.AppliedArithmetic" />
+      <item itemvalue="Application.ReverseAndExclude" />
+      <item itemvalue="Application.PredicateForNames" />
+      <item itemvalue="Application.FindTheSmallestElement" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FindTheSmallestElement" />
+        <item itemvalue="Application.PredicateForNames" />
+        <item itemvalue="Application.ReverseAndExclude" />
         <item itemvalue="Application.AppliedArithmetic" />
         <item itemvalue="Application.FindEvensOrOdds" />
-        <item itemvalue="Application.CustomMinFunction" />
-        <item itemvalue="Application.KnightsOfHonor" />
-        <item itemvalue="Application.ConsumerPrint" />
       </list>
     </recent_temporary>
   </component>
@@ -205,5 +205,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

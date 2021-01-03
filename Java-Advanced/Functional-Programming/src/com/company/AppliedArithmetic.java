@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class AppliedArithmetic {
     private static final String END_COMMAND = "end";
@@ -18,25 +19,47 @@ public class AppliedArithmetic {
             numbers[i] = Integer.parseInt(input[i]);
         }
 
-        // FIXME: 31-Dec-20 
-        Consumer<Integer[]> addCommand = nums -> Arrays.asList(nums).forEach(num -> num++);
-        Consumer<Integer[]> multiplyCommand = nums -> Arrays.asList(nums).forEach(num -> num *= 2);
-        Consumer<Integer[]> subtractCommand = nums -> Arrays.asList(nums).forEach(num -> num--);
-        Consumer<Integer[]> printCommand = nums -> Arrays.asList(nums)
-                .forEach(num -> System.out.println(String.join(" ", num.toString())));
+        Function<Integer[], Integer[]> addCommand = nums -> {
+            for (int i = 0; i < nums.length; i++) {
+                nums[i]++;
+            }
+            return nums;
+        };
+        Function<Integer[], Integer[]> multiplyCommand = nums -> {
+            for (int i = 0; i < nums.length; i++) {
+                nums[i] *= 2;
+            }
+            return nums;
+        };
+        Function<Integer[], Integer[]> subtractCommand = nums -> {
+            for (int i = 0; i < nums.length; i++) {
+                nums[i]--;
+            }
+            return nums;
+        };
+        Consumer<Integer[]> printCommand = nums -> {
+            String[] result = new String[nums.length];
+
+            for (int i = 0; i < result.length; i++) {
+                result[i] = nums[i].toString();
+            }
+
+            System.out.println(String.join(" ", result));
+        };
 
         String command = reader.readLine();
 
         while (!END_COMMAND.equals(command)) {
             switch (command) {
                 case "add":
-                    addCommand.accept(numbers);
+                    numbers = addCommand.apply(numbers);
                     break;
                 case "multiply":
-                    multiplyCommand.accept(numbers);
+                    numbers = multiplyCommand.apply(numbers);
                     break;
                 case "subtract":
-                    subtractCommand.accept(numbers);
+                    numbers = subtractCommand.apply(numbers);
+                    break;
                 case "print":
                     printCommand.accept(numbers);
                     break;
