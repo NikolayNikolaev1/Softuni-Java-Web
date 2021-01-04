@@ -100,6 +100,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Intro-to-Java" />
   </component>
   <component name="RunManager" selected="Application.StudentsEnrolled">
     <configuration name="ExcellentStudents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -205,5 +206,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

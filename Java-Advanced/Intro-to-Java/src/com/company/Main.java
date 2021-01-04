@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        vehiclePark(scanner);
-
+        // Change the called method for testing exercises..
+        blurFilter(scanner);
     }
 
     private static void rectangleArea(Scanner scanner) {
@@ -303,6 +303,84 @@ public class Main {
 
         System.out.printf("Vehicles left: %s%n", String.join(", ", carsList));
         System.out.printf("Vehicles sold: %d%n", vehicleSold);
+    }
+
+    private static void blurFilter(Scanner scanner) {
+        long blurAmount = Long.parseLong(scanner.nextLine());
+        String[] matrixSize = scanner.nextLine().split(" ");
+        int matrixRow = Integer.parseInt(matrixSize[0]);
+        int matrixCol = Integer.parseInt(matrixSize[1]);
+        long[][] matrix = new long[matrixRow][matrixCol];
+
+        for (int row = 0; row < matrixRow; row++) {
+            for (int col = 0; col < matrixCol; col++) {
+                matrix[row][col] = scanner.nextInt();
+            }
+
+            scanner.nextLine();
+        }
+
+        String[] blurCoordinates = scanner.nextLine().split(" ");
+        int blurRow = Integer.parseInt(blurCoordinates[0]);
+        int blurCol = Integer.parseInt(blurCoordinates[1]);
+
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[0].length; col++) {
+                if (row == blurRow && col == blurCol) {
+                    matrix[row][col] += blurAmount;
+                    // Booleans to save information for already changed cols..
+                    boolean isPastColBlurred = false;
+                    boolean isNextColBlurred = false;
+
+
+                    // Check for existing upper row..
+                    if (row - 1 >= 0) {
+                        matrix[row - 1][col] += blurAmount;
+
+                        // Check for existing col before the coordinates' col
+                        if (col - 1 >= 0) {
+                            matrix[row - 1][col - 1] += blurAmount;
+                            matrix[row][col - 1] += blurAmount;
+                            isPastColBlurred = true;
+                        }
+
+                        // Check for existing col after the coordinates' col
+                        if (col + 1 < matrix[0].length) {
+                            matrix[row - 1][col + 1] += blurAmount;
+                            matrix[row][col + 1] += blurAmount;
+                            isNextColBlurred = true;
+                        }
+                    }
+
+                    if (row + 1 < matrix.length) {
+                        matrix[row + 1][col] += blurAmount;
+
+                        // Check for existing col before the coordinates' col
+                        if (col - 1 >= 0) {
+                            matrix[row + 1][col - 1] += blurAmount;
+                            if (!isPastColBlurred) {
+                                matrix[row][col - 1] += blurAmount;
+                            }
+                        }
+
+                        // Check for existing col after the coordinates' col
+                        if (col + 1 < matrix[0].length) {
+                            matrix[row + 1][col + 1] += blurAmount;
+                            if (!isNextColBlurred) {
+                                matrix[row][col + 1] += blurAmount;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[0].length; col++) {
+                System.out.printf("%d ", matrix[row][col]);
+            }
+            System.out.println();
+        }
     }
 }
 
