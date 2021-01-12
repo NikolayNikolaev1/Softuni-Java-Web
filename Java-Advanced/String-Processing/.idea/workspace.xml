@@ -100,10 +100,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Palindromes">
-    <configuration name="CountSubstringOccurences" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.CountSubstringOccurences" />
+  <component name="RunManager" selected="Application.ExtractEmails">
+    <configuration name="ExtractEmails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ExtractEmails" />
+      <module name="String-Processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatchFullName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.MatchFullName" />
+      <module name="String-Processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatchPhoneNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.MatchPhoneNumbers" />
       <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
@@ -128,34 +155,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumBigNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.SumBigNumbers" />
-      <module name="String-Processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TextFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.TextFilter" />
-      <module name="String-Processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnicodeCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.UnicodeCharacters" />
+    <configuration name="ReplaceAnchorTag" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ReplaceAnchorTag" />
       <module name="String-Processing" />
       <extension name="coverage">
         <pattern>
@@ -168,19 +169,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CountSubstringOccurences" />
-      <item itemvalue="Application.SumBigNumbers" />
-      <item itemvalue="Application.TextFilter" />
-      <item itemvalue="Application.UnicodeCharacters" />
       <item itemvalue="Application.Palindromes" />
+      <item itemvalue="Application.MatchFullName" />
+      <item itemvalue="Application.MatchPhoneNumbers" />
+      <item itemvalue="Application.ReplaceAnchorTag" />
+      <item itemvalue="Application.ExtractEmails" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExtractEmails" />
+        <item itemvalue="Application.ReplaceAnchorTag" />
+        <item itemvalue="Application.MatchPhoneNumbers" />
+        <item itemvalue="Application.MatchFullName" />
         <item itemvalue="Application.Palindromes" />
-        <item itemvalue="Application.UnicodeCharacters" />
-        <item itemvalue="Application.TextFilter" />
-        <item itemvalue="Application.SumBigNumbers" />
-        <item itemvalue="Application.CountSubstringOccurences" />
       </list>
     </recent_temporary>
   </component>
@@ -206,5 +207,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/ExtractEmails.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
