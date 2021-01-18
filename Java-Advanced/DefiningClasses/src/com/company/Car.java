@@ -16,6 +16,7 @@ public class Car {
     private List<Tire> tires;
     private int weight;
     private String color;
+    private int speed;
 
     public Car(String model, double fuelAmount, double fuelCost) {
         setModel(model);
@@ -45,6 +46,11 @@ public class Car {
         setEngine(engine);
         setWeight(weight);
         setColor(color);
+    }
+
+    public Car(String model, int speed) {
+        setModel(model);
+        setSpeed(speed);
     }
 
     public Car(String model, Engine engine, int weight) {
@@ -129,6 +135,14 @@ public class Car {
         this.color = color;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
+    private void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
     public void drive(int amountOfKm) {
         double neededFuelAmount = amountOfKm * this.fuelCost;
         if (neededFuelAmount <= this.fuelAmount) {
@@ -137,11 +151,6 @@ public class Car {
         } else {
             System.out.println("Insufficient fuel for the drive");
         }
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s %.2f %d", this.getModel(), this.getFuelAmount(), this.getDistanceTraveled());
     }
 
     public String withEngineDetailsToString() {
@@ -154,5 +163,14 @@ public class Car {
 
         return String.format("%s:%n%s%nWeight: %s%nColor: %s",
                 this.getModel(), this.engine.toString(), weightToString, this.color);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %.2f %d", this.getModel(), this.getFuelAmount(), this.getDistanceTraveled());
+    }
+
+    public String toStringModelSpeed() {
+        return String.format("%s %d%n", this.getModel(), this.getSpeed());
     }
 }

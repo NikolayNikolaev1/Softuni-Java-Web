@@ -18,11 +18,17 @@ public class Main {
     private static final String POKEMON_ELEMENT_ELECTRICITY = "electricity";
     private static final String POKEMON_ELEMENT_FIRE = "fire";
     private static final String POKEMON_ELEMENT_WATER = "water";
+    private static final String COMPANY_INFORMATION = "company";
+    private static final String POKEMON_INFORMATION = "pokemon";
+    private static final String PARENTS_INFORMATION = "parents";
+    private static final String CHILDREN_INFORMATION = "children";
+    private static final String CAR_INFORMATION = "car";
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         // Each exercise has its own method. Call the method name to do the exercise.
-        pokemonTrainer((reader));
+        familyTree((reader));
     }
 
     private static void opinionPoll(BufferedReader reader) throws IOException {
@@ -311,6 +317,82 @@ public class Main {
         trainers.stream()
                 .sorted(Comparator.comparingInt(Trainer::getNumberOfBadges).reversed())
                 .forEach(t -> System.out.println(t.toString()));
+    }
+
+    private static void google(BufferedReader reader) throws IOException {
+        List<Person> people = new ArrayList<>();
+        String[] input = reader.readLine().split("\\s+");
+
+        while (!END_COMMAND.equalsIgnoreCase(input[0])) {
+            String personName = input[0];
+            Person person;
+
+            Optional<Person> doesPersonExists = people.stream()
+                    .filter(p -> p.getName().equalsIgnoreCase(personName))
+                    .findFirst();
+
+            if (doesPersonExists.isPresent()) {
+                // Search if person already exists.
+                person = doesPersonExists.get();
+            } else {
+                // Create new person.
+                person = new Person(personName);
+                people.add(person);
+            }
+
+            String informationData = input[1];
+
+            switch (informationData) {
+                case COMPANY_INFORMATION:
+                    String companyName = input[2];
+                    String department = input[3];
+                    double salary = Double.parseDouble(input[4]);
+                    Company company = new Company(companyName, department, salary);
+                    person.setCompany(company);
+                    break;
+                case POKEMON_INFORMATION:
+                    String pokemonName = input[2];
+                    String pokemonType = input[3];
+                    Pokemon pokemon = new Pokemon(pokemonName, pokemonType);
+                    person.addPokemon(pokemon);
+                    break;
+                case PARENTS_INFORMATION:
+                    String parentName = input[2];
+                    String parentBirthday = input[3];
+                    Parent parent = new Parent(parentName, parentBirthday);
+                    person.addParent(parent);
+                    break;
+                case CHILDREN_INFORMATION:
+                    String childName = input[2];
+                    String childBirthday = input[3];
+                    Child child = new Child(childName, childBirthday);
+                    person.addChild(child);
+                    break;
+                case CAR_INFORMATION:
+                    String carModel = input[2];
+                    int carSpeed = Integer.parseInt(input[3]);
+                    Car car = new Car(carModel, carSpeed);
+                    person.setCar(car);
+                    break;
+            }
+
+            input = reader.readLine().split("\\s+");
+        }
+
+        String searchPersonName = reader.readLine();
+
+        people.stream()
+                .filter(p -> p.getName().equalsIgnoreCase(searchPersonName))
+                .forEach(p -> System.out.println(p.toString()));
+    }
+
+    private static void familyTree(BufferedReader reader) throws IOException {
+        String[] personInput = reader.readLine().split("\\s+");
+        Person person;
+
+        if (personInput.length == 2) {
+
+        }
     }
 
     private static void pokemonTournament(List<Trainer> trainers, String pokemonElement) {

@@ -11,6 +11,11 @@ public class Pokemon {
         setHealth(health);
     }
 
+    public Pokemon(String name, String element) {
+        setName(name);
+        setElement(element);
+    }
+
     public String getName() {
         return name;
     }
@@ -37,5 +42,10 @@ public class Pokemon {
 
     public void loseHealth() {
         this.health -= 10;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s%n", this.getName(), this.getElement());
     }
 }

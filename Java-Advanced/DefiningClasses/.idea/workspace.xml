@@ -145,6 +145,7 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="employee" />
+        <watch expression="pokemons" />
       </configuration>
     </watches-manager>
   </component>
