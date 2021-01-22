@@ -387,12 +387,60 @@ public class Main {
     }
 
     private static void familyTree(BufferedReader reader) throws IOException {
+        // FIXME: 19-Jan-21 
+        List<FamilyTreePerson> people = new ArrayList<>();
         String[] personInput = reader.readLine().split("\\s+");
-        Person person;
+        FamilyTreePerson mainPerson;
 
         if (personInput.length == 2) {
-
+            // Get main person first and last names.
+            String firstName = personInput[0];
+            String lastName = personInput[1];
+            mainPerson = new FamilyTreePerson(firstName, lastName);
+        } else {
+            // Get main person birthdate.
+            String birthdate = personInput[0];
+            mainPerson = new FamilyTreePerson(birthdate);
         }
+
+        people.add(mainPerson);
+
+        String[] inputLine = reader.readLine().split("-");
+
+        while (!END_COMMAND.equalsIgnoreCase(inputLine[0])) {
+            if (inputLine.length == 2) {
+                // Get parent <-> child connection.
+                String[] parentArg = inputLine[0].split("\\s+");
+                String[] childArg = inputLine[1].split("\\s+");
+
+                FamilyTreePerson parent = parseFamilyTreePerson(parentArg, people);
+                FamilyTreePerson child = parseFamilyTreePerson(childArg, people);
+
+                parent.addFamilyMember(child, "child");
+                child.addFamilyMember(parent, "parent");
+            } else {
+                // Get name <-> birthdate connection.
+                String personFirstName = inputLine[0].split("\\s+")[0];
+                String personLastName = inputLine[0].split("\\s+")[1];
+                String personBirthdate = inputLine[0].split("\\s+")[2];
+
+                Optional<FamilyTreePerson> currentPerson = people.stream()
+                        .filter(p -> p.getFirstName().equals(personFirstName) && p.getLastName().equals(personLastName)
+                                || p.getBirthdate().equals(personBirthdate))
+                        .findFirst();
+
+                if (currentPerson.isPresent()) {
+                    currentPerson.get().setFirstName(personFirstName);
+                    currentPerson.get().setLastName(personLastName);
+                    currentPerson.get().setBirthdate(personBirthdate);
+                }
+            }
+
+
+            inputLine = reader.readLine().split("-");
+        }
+
+        System.out.println(mainPerson.toString());
     }
 
     private static void pokemonTournament(List<Trainer> trainers, String pokemonElement) {
@@ -407,5 +455,45 @@ public class Main {
                 .forEach(t -> t.getPokemons().forEach(Pokemon::loseHealth));
     }
 
+    private static FamilyTreePerson parseFamilyTreePerson(String[] personArg, List<FamilyTreePerson> people) {
+        FamilyTreePerson person;
+
+        if (personArg.length == 2) {
+            // Find/Create person with name.
+            String parentFirstName = personArg[0];
+            String parentLastName = personArg[1];
+
+            Optional<FamilyTreePerson> doesPersonExists = people.stream()
+                    .filter(p -> p.getFirstName().equals(parentFirstName) && p.getLastName().equals(parentLastName))
+                    .findFirst();
+
+            if (doesPersonExists.isPresent()) {
+                // Search if person already exists.
+                person = doesPersonExists.get();
+            } else {
+                // Create new person.
+                person = new FamilyTreePerson(parentFirstName, parentLastName);
+                people.add(person);
+            }
+        } else {
+            // Find/Create person with birthdate
+            String parentBirthdate = personArg[0];
+
+            Optional<FamilyTreePerson> doesPersonExists = people.stream()
+                    .filter(p -> p.getBirthdate().equals(parentBirthdate))
+                    .findFirst();
+
+            if (doesPersonExists.isPresent()) {
+                // Search if person already exists.
+                person = doesPersonExists.get();
+            } else {
+                // Create new person.
+                person = new FamilyTreePerson(parentBirthdate);
+                people.add(person);
+            }
+        }
+
+        return person;
+    }
 
 }
