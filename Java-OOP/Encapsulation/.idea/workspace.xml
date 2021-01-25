@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb83b5d0-c33c-49e0-a8c9-7646f9a477e0" name="Default Changelist" comment="" />
+    <list default="true" id="07fdf1d8-73de-4019-81fb-bd6102efbf32" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
         <option value="Enum" />
       </list>
@@ -24,7 +25,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1nTKQxF0HyqMLu6irPBWE3paPl8" />
+  <component name="ProjectId" id="1nVjxS4rEd76rVsWxotynW5cxJc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,20 +34,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="zoo" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="animals.Main" />
-      <module name="Inheritance" />
+      <option name="MAIN_CLASS_NAME" value="animal.farm.Main" />
+      <module name="Encapsulation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="animals.*" />
+          <option name="PATTERN" value="animal.farm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shopping.spree.Main" />
+      <module name="Encapsulation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shopping.spree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,11 +63,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="person.Main" />
-      <module name="Inheritance" />
+      <option name="MAIN_CLASS_NAME" value="box.Main" />
+      <module name="Encapsulation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="person.*" />
+          <option name="PATTERN" value="box.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,6 +77,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -77,11 +86,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb83b5d0-c33c-49e0-a8c9-7646f9a477e0" name="Default Changelist" comment="" />
-      <created>1611408628751</created>
+      <changelist id="07fdf1d8-73de-4019-81fb-bd6102efbf32" name="Default Changelist" comment="" />
+      <created>1611482400503</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1611408628751</updated>
+      <updated>1611482400503</updated>
     </task>
     <servers />
   </component>
