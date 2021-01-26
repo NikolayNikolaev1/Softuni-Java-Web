@@ -20,7 +20,7 @@ public class Topping {
         boolean isValidType = Arrays.stream(ToppingType.values())
                 .map(Enum::toString)
                 .collect(Collectors.toList())
-                .contains(toppingType);
+                .contains(toppingType.toUpperCase());
 
         if (!isValidType) {
             throw new IllegalArgumentException(String.format("Cannot place %s on top of your pizza.", toppingType));
@@ -31,14 +31,14 @@ public class Topping {
 
     private void setWeight(double weight) {
         if (weight < 1 || weight > 50) {
-            throw new IllegalArgumentException(String.format("%s weight should be in the range [1..50]", this.toppingType));
+            throw new IllegalArgumentException(String.format("%s weight should be in the range [1..50].", this.toppingType));
         }
 
         this.weight = weight;
     }
 
     public double calculateCalories() {
-        double toppingTypeModifier = ToppingType.valueOf(this.toppingType).getModifier();
+        double toppingTypeModifier = ToppingType.valueOf(this.toppingType.toUpperCase()).getModifier();
 
         return (BASE_CALORIES_PER_GRAM * this.weight) * toppingTypeModifier;
     }

@@ -23,7 +23,7 @@ public class Dough {
         boolean isValidType = Arrays.stream(FlourType.values())
                 .map(Enum::toString)
                 .collect(Collectors.toList())
-                .contains(flourType);
+                .contains(flourType.toUpperCase());
 
         if (!isValidType) {
             throw new IllegalArgumentException("Invalid type of dough.");
@@ -33,13 +33,13 @@ public class Dough {
     }
 
     private void setBakingTechnique(String bakingTechnique) {
-        boolean isValidTechnique = Arrays.stream(FlourType.values())
+        boolean isValidTechnique = Arrays.stream(BakingTechnique.values())
                 .map(Enum::toString)
                 .collect(Collectors.toList())
-                .contains(bakingTechnique);
+                .contains(bakingTechnique.toUpperCase());
 
         if (!isValidTechnique) {
-            throw new IllegalArgumentException("Invalid type of dough");
+            throw new IllegalArgumentException("Invalid type of dough.");
         }
 
         this.bakingTechnique = bakingTechnique;
@@ -54,8 +54,8 @@ public class Dough {
     }
 
     public double calculateCalories() {
-        double flourTypeModifier = FlourType.valueOf(this.flourType).getModifier();
-        double bakingTechniqueModifier = BakingTechnique.valueOf(this.bakingTechnique).getModifier();
+        double flourTypeModifier = FlourType.valueOf(this.flourType.toUpperCase()).getModifier();
+        double bakingTechniqueModifier = BakingTechnique.valueOf(this.bakingTechnique.toUpperCase()).getModifier();
 
         return (BASE_CALORIES_PER_GRAM * this.weight) * flourTypeModifier * bakingTechniqueModifier;
     }
