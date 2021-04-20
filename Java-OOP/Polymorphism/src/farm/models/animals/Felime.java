@@ -1,7 +1,7 @@
 package farm.models.animals;
 
 public abstract class Felime extends Mammal{
-    public Felime(String animalName, String animalType, double animalWeight, int foodEaten, String livingRegion) {
-        super(animalName, animalType, animalWeight, foodEaten, livingRegion);
+    public Felime(String animalName, String animalType, double animalWeight, String livingRegion) {
+        super(animalName, animalType, animalWeight, livingRegion);
     }
 }

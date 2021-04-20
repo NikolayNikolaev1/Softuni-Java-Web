@@ -8,8 +8,27 @@ public abstract class Animal {
     private double animalWeight;
     private int foodEaten;
 
-    public Animal(String animalName, String animalType, double animalWeight, int foodEaten) {
+    public Animal(String animalName, String animalType, double animalWeight) {
+        this.setAnimalName(animalName);
+        this.setAnimalType(animalType);
+        this.setAnimalWeight(animalWeight);
+        this.setFoodEaten(0);
+    }
 
+    protected String getAnimalName() {
+        return this.animalName;
+    }
+
+    protected String getAnimalType() {
+        return this.animalType;
+    }
+
+    protected double getAnimalWeight() {
+        return this.animalWeight;
+    }
+
+    protected int getFoodEaten() {
+        return this.foodEaten;
     }
 
     private void setAnimalName(String animalName) {
@@ -24,12 +43,11 @@ public abstract class Animal {
         this.animalWeight = animalWeight;
     }
 
-    private void setFoodEaten(int foodEaten) {
+    protected void setFoodEaten(int foodEaten) {
         this.foodEaten = foodEaten;
     }
 
+    public abstract void makeSound();
 
-    protected abstract void makeSound();
-
-    protected abstract void eat(Food food);
+    public abstract void eat(Food food);
 }
